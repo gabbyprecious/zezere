@@ -61,6 +61,10 @@ class RunRequest(RulesModel):
         "RunRequest type", max_length=2, choices=TYPE_CHOICES
     )
 
+    notes: models.CharField = models.CharField(
+        "RunRequest notes", null=True, blank=True, max_length=255
+    )
+
     kernel_url: models.URLField = models.URLField(
         "Kernel URL", null=True, blank=True, max_length=255
     )
