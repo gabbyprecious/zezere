@@ -1,8 +1,8 @@
 django>=2.1
 djangorestframework
 django-ipware
-psycopg2
+psycopg2-binary
 rules
 requests
 mozilla-django-oidc
-mod_wsgi
+mod-wsgi

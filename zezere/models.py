@@ -5,7 +5,7 @@ import json
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.core.validators import RegexValidator
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.http import HttpRequest
 from django.shortcuts import get_object_or_404
 from django.utils.translation import gettext_lazy as _
@@ -17,6 +17,8 @@ from . import rules
 from .runreqs import validate_runreq_autoid, generate_auto_runreq
 from . import ignconfig
 
+
+User = get_user_model()
 
 class AttrDict(dict):
     def __getattr__(self, name):

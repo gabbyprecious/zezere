@@ -1,9 +1,11 @@
 from contextlib import contextmanager
 
 from django.test import TestCase as djangoTestCase
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 
 from zezere import models
+
+User = get_user_model()
 
 
 class TestCase(djangoTestCase):
